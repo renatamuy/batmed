@@ -1,20 +1,59 @@
-# Tackett Data in networks
-# https://www.mdpi.com/article/10.3390/d14030179/s1. 
-# Dataviz ideas: https://github.com/manlius/muxViz/blob/master/gui-old/theory/README.md
+# Tackett
+# This repo is a supplement to the manuscript:
+# Muylaert et al., in prep. Connections in the Dark: Network Science and 
+# Social-Ecological Networks as Tools for Bat Conservation and Public Health.
+# Global Union of Bat Diversity Networks (GBatNet).
+# See README for further info: https://github.com/renatamuy/batmed
 
-require(here)
-library(dplyr)
-library(ggraph)
-require(networkD3)
-require(echarts4r)
-devtools::install_github('Ecological-Complexity-Lab/emln', force=T) # new package - explore maybe
+
+if(!require(here)){
+  install.packages("here")
+  library(here)
+}
+
+if(!require(dplyr)){
+  install.packages("dplyr")
+  library(dplyr)
+}
+
+if(!require(echarts4r)){
+  install.packages("echarts4r")
+  library(echarts4r)
+}
+
+if(!require(emln)){
+  install.packages("emln")
+  library(emln)
+}
+
+if(!require(ggalluvial)){
+  install.packages("ggalluvial")
+  library(ggalluvial)
+}
+
+if(!require(ggplot2)){
+  install.packages("ggplot2")
+  library(ggplot2)
+}
+
+if(!require(igraph)){
+  install.packages("igraph")
+  library(igraph)
+}
+
+if(!require(networkD3)){
+  install.packages("networkD3")
+  library(networkD3)
+}
+
+if(!require(xlsx)){
+  install.packages("xlsx")
+  library(xlsx)
+}
+
+devtools::install_github('Ecological-Complexity-Lab/emln', force=T)
 library(emln)
-# install.packages("ggalluvial")
-library(ggalluvial)
-if (!require(tidyverse)) install.packages('tidyverse')
-if (!require(ggplot2)) install.packages('ggplot2')
-if (!require(xlsx)) install.packages('xlsx')
-if (!require(igraph)) install.packages('igraph')
+
 
 setwd(here())
 setwd('data')
